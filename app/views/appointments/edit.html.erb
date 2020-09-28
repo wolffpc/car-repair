@@ -1,0 +1,66 @@
+<h1>Your Appointment</h1>
+
+<%= form_with(model: @appointment, local: true) do |form| %>
+
+    <% if @appointment.errors.any? %>
+        <div id="error_explanation">
+            <h2>
+                <%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being submitted:
+            </h2>
+            <ul>
+                <% @appointment.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <p><strong>Your Email: </strong><%= @appointment.email %></p>
+
+    <p>
+        <%= form.label :first %><br>
+        <%= form.text_field :first %>
+    </p>
+
+    <p>
+        <%= form.label :last %><br>
+        <%= form.text_field :last %>
+    </p>
+
+    <p>
+        <%= form.label :phone %><br>
+        <%= form.text_field :phone %>
+    </p>
+
+    <p>
+        <%= form.label :year %><br>
+        <%= form.text_field :year %>
+    </p>
+
+    <p>
+        <%= form.label :make %><br>
+        <%= form.text_field :make %>
+    </p>
+
+    <p>
+        <%= form.label :model %><br>
+        <%= form.text_field :model %>
+    </p>
+
+    <p>
+        <%= form.label :repair %><br>
+        <%= form.text_area :repair %>
+    </p>
+
+    <p>
+        <%= form.label :datetime %><br>
+        <%= form.text_field :datetime %>
+    </p>
+
+    <p>
+        <%= form.submit "Submit" %>
+    </p>
+
+<% end %>
+
+<%= link_to 'Home', "/" %>

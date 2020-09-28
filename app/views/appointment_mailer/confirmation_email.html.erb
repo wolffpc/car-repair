@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Your appointment request has been submitted with the following details.</h1>
+    <p>
+        <strong>Email: </strong><%= @appointment.email %>
+    </p>
+    <p>
+        <strong>First Name: </strong><%= @appointment.first %>
+    </p>
+    <p>
+        <strong>Last Name: </strong><%= @appointment.last %>
+    </p>
+    <p>
+        <strong>Phone Number: </strong><%= @appointment.phone %>
+    </p>
+    <p>
+        <strong>Year: </strong><%= @appointment.year %>
+    </p>
+    <p>
+        <strong>Make: </strong><%= @appointment.make %>
+    </p>
+    <p>
+        <strong>Model: </strong><%= @appointment.model %>
+    </p>
+    <p>
+        <strong>Repair Requested: </strong><%= @appointment.repair %>
+    </p>
+    <p>
+        <strong>Appointment Date/Time: </strong><%= @appointment.datetime %>
+    </p>
+  </body>
+</html>
