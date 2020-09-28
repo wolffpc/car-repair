@@ -6,23 +6,43 @@ Car Repair is a simple Rails application that allows a user to make a maintenanc
 
 Before you begin, ensure you have met the following requirements:
 * You have `ruby` on your system (developed using 2.7.1).
-* `Bundler` is installed
+```
+ruby -v
+```
+* `rails` is installed
+```
+rails -v
+```
+* `Yarn` is installed
+```
+yarn -v
+```
 
-## Installing Weather Vue
+## Installing Car Repair
 
 To setup Car Repair locally, follow these steps:
 
 Download or clone the repository and navigate to the directory
 
-Install the dependencies:
+Install dependencies:
 ```
 bundle install
+```
+```
+yarn install
+```
+
+Setup the database:
+```
+rails db:migrate
 ```
 
 Run the development server:
 ```
-npm run serve
+rails s
 ```
+
+To send emails you will need to setup the email server settings in `config/environments/development.rb`. For this project I used my gmail account to send emails and I've left the basic settings in place, you will need to provide a gmail username and password if you'd like to do the same (if you have 2FA turned on you will need to setup an application password).
 
 ## Contact
 
